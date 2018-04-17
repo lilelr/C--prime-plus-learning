@@ -8,3 +8,6 @@ add_executable(coder_interview_chapter6_main ${coder_interview_chapter6_SRCS})
 
 set(coder_interview_chapter7_SRCS chapter7.cpp)
 add_executable(coder_interview_chapter7_main ${coder_interview_chapter7_SRCS})
+
+set(coder_interview_chapter9_SRCS chapter9.cpp)
+add_executable(coder_interview_chapter9_main ${coder_interview_chapter9_SRCS})
