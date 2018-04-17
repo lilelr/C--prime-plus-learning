@@ -102,6 +102,26 @@ public:
     virtual void cc(){};
 };
 
+class L{
+private:
+    int a;
+public:
+    L(){
+        a = 0;
+    }
+    void operator++(){
+        a+=1;
+    }
+
+    void operator++(int){
+        a+=2;
+    }
+    friend void my_print(const L& c);
+};
+
+void my_print(const L& c){
+    cout<<c.a<<endl;
+}
 int main(){
     C c(10);
     cout<<c.Get_data()<<endl;
@@ -132,5 +152,27 @@ int main(){
     cout<<"sizeof(J):"<< sizeof(J)<<endl;
     cout<<"sizeof(K):"<< sizeof(K)<<endl;
 //    system("pause");
+
+    int vInt=10;
+    int arr[2] = {10,20};
+    int *p = &vInt;
+    int **p2p = &p;
+    int *parr[2] = {&vInt,&vInt};
+    int (*p2arr)[2] = &arr;
+    cout<<"Declaration  int vInt=10 type== " << typeid(vInt).name()<<endl;
+    cout<<"Declaration  int arr[2] = {10,20} type== "<< typeid(arr).name()<<endl;
+    cout<<"Declaration   int *p = &vInt type== "<< typeid(p).name()<<endl;
+    cout<<"Declaration   int **p2p = &p type== "<< typeid(p2p).name()<<endl;
+    cout<<"Declaration   int *parr[2] = {&vInt,&vInt} type== "<< typeid(parr).name()<<endl;
+    cout<<"Declaration   int (*p2arr)[2] type== "<< typeid(p2arr).name()<<endl;
+
+    L classl;
+    my_print(classl);
+    ++classl;
+    my_print(classl);
+    classl++;
+    my_print(classl);
+
+
     return 0;
 }
