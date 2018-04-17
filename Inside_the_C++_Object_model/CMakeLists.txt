@@ -3,6 +3,7 @@ project(C___primer_plus_6_codes)
 
 set(CMAKE_CXX_STANDARD 11)
 
+add_subdirectory(chapter2-Copy-Constructor-Construction)
 
 add_subdirectory(chapter3-The-Semantics-of-Data)
 

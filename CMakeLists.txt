@@ -20,5 +20,7 @@ add_subdirectory(algorithms)
 
 add_subdirectory(Inside_the_C++_Object_model)
 
+add_subdirectory(coder_interview_fifth_version)
+
 
 

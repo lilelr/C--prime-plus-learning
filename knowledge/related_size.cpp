@@ -58,6 +58,12 @@ int checkCPU(){
     return temp.b == 1;
 }
 
+struct F{
+    char a;
+    int b;
+    short c;
+};
+
 int main(){
     int ans_size_A = sizeof(A);
     cout<<"sizeof A: "<<ans_size_A<<endl;
@@ -67,6 +73,9 @@ int main(){
     cout<<"sizeof E: "<< sizeof(E)<<endl;
 
     cout<<"machine point "<<checkCPU()<<endl;
+
+    cout<<"sizeof F: "<< sizeof(F)<<endl;
+    cout<<"sizeof G:"<< sizeof("abcde")<<endl;
 
     return 0;
 }
