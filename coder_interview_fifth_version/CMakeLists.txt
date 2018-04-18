@@ -17,3 +17,6 @@ add_executable(coder_interview_chapter10_main ${coder_interview_chapter10_SRCS})
 
 set(coder_interview_chapter11_SRCS chapter11.cpp)
 add_executable(coder_interview_chapter11_main ${coder_interview_chapter11_SRCS})
+
+set(coder_interview_chapter14_SRCS chapter14.cpp)
+add_executable(coder_interview_chapter14_main ${coder_interview_chapter14_SRCS})
