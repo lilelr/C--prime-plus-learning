@@ -27,6 +27,9 @@ add_executable(class-point ${class-point_SRCS})
 
 set(usett1_SRCS usett1.cpp tabtenn1.h tabtenn1.cpp)
 add_executable(usett1_main ${usett1_SRCS})
+
+set(scientist_physicist_SRCS scientist_physicist.cpp)
+add_executable(scientist_physicist_SRCS_main ${scientist_physicist_SRCS})
 #target_link_libraries(message-event /usr/local/lib/libmesos.so)
 
 #include_directories("/usr/local/include/process")

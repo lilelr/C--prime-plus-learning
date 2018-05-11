@@ -23,6 +23,12 @@ int main()
     cout << "Withdrawing $4200 from the Hogg Account:\n";
     Hoggy.Withdraw(4200.00);
     Hoggy.ViewAcct();
+
+    cout<<"lele"<<endl;
+    BrassPlus ophelia;
+    Brass* bp;
+    bp = &ophelia;
+    bp->ViewAcct();
 	// std::cin.get();
     return 0; 
 }
