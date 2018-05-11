@@ -12,3 +12,11 @@ add_executable(knowledge_const_usages_main ${const_usages_SRCS})
 
 set(typeid_usages_SRCS typeid_usage.cpp)
 add_executable(knowledge_typeid_usage_main ${typeid_usages_SRCS})
+
+set(gdb_test_SRCS gdb_test.cpp)
+add_executable(gdb_test_main ${gdb_test_SRCS})
+
+
+
+#set(A_class_cannot_be_inherited_SRCS A_class_cannot_be_inherited.cpp)
+#add_executable(knowledge_A_class_cannot_be_inherited_main ${A_class_cannot_be_inherited_SRCS})

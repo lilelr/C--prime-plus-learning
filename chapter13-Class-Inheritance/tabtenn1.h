@@ -1,40 +1,34 @@
-//
-// Created by YuXiao on 3/15/18.
-//
-
-#ifndef C_PRIMER_PLUS_6_CODES_TABTENN1_H
-#define C_PRIMER_PLUS_6_CODES_TABTENN1_H
-
-
+// tabtenn1.h -- a table-tennis base class
+#ifndef TABTENN1_H_
+#define TABTENN1_H_
 #include <string>
-
 using std::string;
-class TableTennisPlayer {
+// simple base class
+class TableTennisPlayer
+{
+private:
+    string firstname;
+    string lastname;
+    bool hasTable;
 public:
-    explicit TableTennisPlayer(const string& fn="none", const string& ln="none",bool ht= false);
+    TableTennisPlayer (const string & fn = "none",
+                       const string & ln = "none", bool ht = false);
     void Name() const;
-    bool HasTable() const{
-        return has_table_;
-    }
-    void ResetTable(bool v){
-        has_table_ = v;
-    }
-
-private:
-    string first_name_;
-    string last_name_;
-    bool has_table_;
+    bool HasTable() const { return hasTable; };
+    void ResetTable(bool v) { hasTable = v; };
 };
 
-class RatedTennisPlayer: public TableTennisPlayer{
-
+// simple derived class
+class RatedPlayer : public TableTennisPlayer
+{
+private:
+    unsigned int rating;
 public:
-    RatedTennisPlayer(const string& first_name, const string& last_name, bool ht, unsigned int rate);
-    void ResetRating(unsigned int rate);
-
-private:
-    unsigned int rate_;
+    RatedPlayer (unsigned int r = 0, const string & fn = "none",
+                 const string & ln = "none", bool ht = false);
+    RatedPlayer(unsigned int r, const TableTennisPlayer & tp);
+    unsigned int Rating() const { return rating; }
+    void ResetRating (unsigned int r) {rating = r;}
 };
 
-
-#endif //C_PRIMER_PLUS_6_CODES_TABTENN1_H
+#endif

@@ -1,22 +1,24 @@
-//
-// Created by YuXiao on 3/15/18.
-//
-
-#include <iostream>
+//tabtenn1.cpp -- simple base-class methods
 #include "tabtenn1.h"
+#include <iostream>
+
 TableTennisPlayer::TableTennisPlayer (const string & fn,
-                                      const string & ln, bool ht) : first_name_(fn),
-                                                                    last_name_(ln), has_table_(ht) {}
+                                      const string & ln, bool ht) : firstname(fn),
+                                                                    lastname(ln), hasTable(ht) {}
 
 void TableTennisPlayer::Name() const
 {
-    std::cout << last_name_ << ", " << first_name_;
+    std::cout << lastname << ", " << firstname;
 }
 
-RatedTennisPlayer::RatedTennisPlayer(const string &first_name, const string &last_name, bool ht, unsigned int rate) :TableTennisPlayer(first_name,last_name,ht){
-    this->rate_ = rate;
+// RatedPlayer methods
+RatedPlayer::RatedPlayer(unsigned int r, const string & fn,
+                         const string & ln, bool ht) : TableTennisPlayer(fn, ln, ht)
+{
+    rating = r;
 }
 
-void RatedTennisPlayer::ResetRating(unsigned int rate) {
-    this->rate_ = rate;
+RatedPlayer::RatedPlayer(unsigned int r, const TableTennisPlayer & tp)
+        : TableTennisPlayer(tp), rating(r)
+{
 }

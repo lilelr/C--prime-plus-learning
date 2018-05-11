@@ -24,6 +24,9 @@ add_executable(dma_main ${dma_SRCS})
 
 set(class-point_SRCS class_point.cpp)
 add_executable(class-point ${class-point_SRCS})
+
+set(usett1_SRCS usett1.cpp tabtenn1.h tabtenn1.cpp)
+add_executable(usett1_main ${usett1_SRCS})
 #target_link_libraries(message-event /usr/local/lib/libmesos.so)
 
 #include_directories("/usr/local/include/process")
