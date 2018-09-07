@@ -22,5 +22,10 @@ int main()
         cout << *films[i] << endl;
     cout << "The winner is " << *pwin << "!\n";
     // cin.get();
+
+    shared_ptr<string> films_second[1] = {shared_ptr<string> (new string("fee"))};
+    shared_ptr<string> ps = films_second[0];
+    cout<<*ps<<endl;
+    cout<< *films_second[0]<<endl;
     return 0;
 }

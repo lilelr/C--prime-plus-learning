@@ -16,16 +16,16 @@ public:
 int main()
 {
     {
-        std::auto_ptr<Report> ps (new Report("using auto_ptr"));
-        ps->comment();   // use -> to invoke a member function
+        std::auto_ptr<Report> ps1 (new Report("using auto_ptr"));
+        ps1->comment();   // use -> to invoke a member function
     }
     {
-        std::shared_ptr<Report> ps (new Report("using shared_ptr"));
-        ps->comment();
+        std::shared_ptr<Report> ps2 (new Report("using shared_ptr"));
+        ps2->comment();
     }
     {
-        std::unique_ptr<Report> ps (new Report("using unique_ptr"));
-        ps->comment();
+//        std::unique_ptr<Report> ps3 (new Report("using unique_ptr"));
+//        ps3->comment();
     }
     // std::cin.get();  
     return 0;

@@ -36,5 +36,28 @@ add_executable(set_main ${set_SRCS})
 set(strngstl_SRCS strngstl.cpp)
 add_executable(strngstl_main ${strngstl_SRCS})
 
-set(ilist_SRCS ilist.cpp)
-add_executable(ilist_main ${ilist_SRCS})
+set(smrtptrs_SRCS smrtptrs.cpp)
+add_executable(smrtptrs_main ${smrtptrs_SRCS})
+
+set(unique_SRCS unique.cpp)
+add_executable(unique_main ${unique_SRCS})
+
+
+set(fowlsp_SRCS fowlsp.cpp)
+add_executable(fowlsp_main ${fowlsp_SRCS})
+
+
+set(fowlup_SRCS fowlup.cpp)
+add_executable(fowlup_main ${fowlup_SRCS})
+
+set(fowl_SRCS fowl.cpp)
+add_executable(fowl_main ${fowl_SRCS})
+
+set(usealgo_SRCS usealgo.cpp)
+add_executable(usealgo_main ${usealgo_SRCS})
+
+set(listrmv_SRCS listrmv.cpp)
+add_executable(listrmv_main ${listrmv_SRCS})
+
+set(vectlist_SRCS vectlist.cpp)
+add_executable(vectlist_main ${vectlist_SRCS})

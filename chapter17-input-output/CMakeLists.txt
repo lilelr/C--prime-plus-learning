@@ -50,6 +50,9 @@ add_executable(strin_main ${strin_SRCS})
 set(strout_SRCS strout.cpp)
 add_executable(strout_main ${strout_SRCS})
 
+set(printf_usage_SRCS printf_usage.cpp)
+add_executable(printf_usage ${printf_usage_SRCS})
+
 
 
 
